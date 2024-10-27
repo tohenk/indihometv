@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  *
- * Copyright (c) 2023 Toha <tohenk@yahoo.com>
+ * Copyright (c) 2023-2024 Toha <tohenk@yahoo.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -32,34 +32,53 @@ class App {
 
     fetch(url) {
         return new Promise((resolve, reject) => {
-            let buff, result, err;
-            const parsedUrl = require('url').parse(url);
-            const http = require('https:' == parsedUrl.protocol ? 'https' : 'http');
-            const options = {method: 'GET'}
-            const req = http.request(url, options, res => {
-                res.setEncoding('utf8');
-                res.on('data', chunk => {
-                    if (buff) {
-                        buff += chunk;
+            let done = false;
+            const f = () => {
+                /** @type {Buffer} buff */
+                let buff, err, code;
+                const parsedUrl = new URL(url);
+                const http = require('https:' == parsedUrl.protocol ? 'https' : 'http');
+                const req = http.request(url, {method: 'GET'}, res => {
+                    code = res.statusCode;
+                    res.setEncoding('utf8');
+                    res.on('data', chunk => {
+                        if (typeof chunk === 'string') {
+                            chunk = Buffer.from(chunk, 'utf8');
+                        }
+                        if (buff) {
+                            buff = Buffer.concat([buff, chunk]);
+                        } else {
+                            buff = chunk;
+                        }
+                    });
+                    res.on('end', () => {
+                        if (code === 301 || code === 302) {
+                            if (res.headers.location) {
+                                url = res.headers.location;
+                            } else {
+                                reject('No redirection to follow!');
+                            }
+                        } else {
+                            done = true;
+                        }
+                    });
+                });
+                req.on('error', e => {
+                    err = e;
+                });
+                req.on('close', () => {
+                    if (err) {
+                        return reject(err);
+                    }
+                    if (done) {
+                        resolve(code === 200 ? buff : null);
                     } else {
-                        buff = chunk;
+                        f();
                     }
                 });
-                res.on('end', () => {
-                    result = buff;
-                });
-            });
-            req.on('error', e => {
-                err = e;
-            });
-            req.on('close', () => {
-                if (result) {
-                    resolve(buff);
-                } else {
-                    reject(err);
-                }
-            });
-            req.end();
+                req.end();
+            }
+            f();
         });
     }
 
@@ -69,8 +88,8 @@ class App {
         const $ = cheerio.load(content);
         const channels = $('#channelContainer a.channel-item');
         const categories = {};
-        channels.each(async (_, ch) => {
-            ch = $(ch);
+        for (const channel of channels) {
+            const ch = $(channel);
             const info = {};
             // channel code
             if (ch.data('code')) {
@@ -95,17 +114,40 @@ class App {
                     info.category = categories[category];
                 }
                 // channel logo
-                let src = ch.find('img').data('src')
-                    .replace(/logogrey\/grey_/, '')
-                    .replace('small', 'big');
-                if (src.indexOf('?') > 0) {
-                    src = src.substr(0, src.indexOf('?'));
+                let logo = ch.find('img').data('src');
+                if (logo.indexOf('?') > 0) {
+                    logo = logo.substr(0, logo.indexOf('?'));
                 }
-                info.logo = src;
+                info.logo = await this.fetchLogo(logo);
                 res.push(info);
             }
-        });
+        }
         return res;
+    }
+
+    fetchLogo(logo) {
+        return new Promise((resolve, reject) => {
+            const r = url => {
+                this.logos[logo] = url;
+                resolve(url);
+            }
+            if (!this.logos) {
+                this.logos = {};
+            }
+            if (this.logos[logo]) {
+                return r(this.logos[logo]);
+            }
+            const nlogo = logo
+                .replace('logogrey/grey_', '')
+                .replace('-BW', '')
+                .replace('small', 'big');
+            if (nlogo === logo) {
+                return r(logo);
+            }
+            this.fetch(nlogo)
+                .then(res => r(res ? nlogo : logo))
+                .catch(err => r(logo));
+        });
     }
 
     async save(data) {
@@ -115,13 +157,15 @@ class App {
             const filename = path.join(__dirname, 'channel.csv');
             stream.pipe(fs.createWriteStream(filename));
             let header = true;
-            Object.keys(data).forEach(ch => {
-                if (header) {
-                    header = false;
-                    stream.write(Object.keys(data[ch]).map(s => s.toUpperCase()));
-                }
-                stream.write(Object.values(data[ch]));
-            });
+            Object.values(data)
+                .sort((a, b) => a.id.localeCompare(b.id))
+                .forEach(ch => {
+                    if (header) {
+                        header = false;
+                        stream.write(Object.keys(ch).map(s => s.toUpperCase()));
+                    }
+                    stream.write(Object.values(ch));
+                });
             stream.end();
             console.log(`Channels saved to ${filename}...`);
         }
@@ -130,8 +174,7 @@ class App {
     async run() {
         const infos = {};
         const urls = [this.tvLiveUrl, this.tvOndemandUrl];
-        for (let i = 0; i < urls.length; i++) {
-            const url = urls[i];
+        for (const url of urls) {
             const body = await this.fetch(url);
             if (!(body instanceof Error)) {
                 const res = await this.parse(body);

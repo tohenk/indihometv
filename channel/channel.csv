@@ -1,137 +1,131 @@
 ID;NAME;CATEGORY;LOGO
-discoveryasia;Discovery Asia;Knowledge;https://images.indihometv.com/assets/DISCOVERYASIA-OTT-135-BW.png
-rcti;RCTI;Local;https://images.indihometv.com/assets/logo_rcti_hd.png
-mnc;MNC;Local;https://images.indihometv.com/assets/logo_mnc_hd.png
-hitsnow;HITS Now;Entertainment;https://images.indihometv.com/logo_hitsnow_ver1.png
-gtv;GTV;Local;https://images.indihometv.com/assets/logo_gtv_hd.png
-animalplanet;Animal Planet;Knowledge;https://images.indihometv.com/assets/ANIMALPLANET-OTT-88-HD-BW.png
-lovenature;Love Nature;Knowledge;https://images.indihometv.com/assets/THUMBNAIL-135-LOVENATUREHD-BW.png
-maxstream;Maxstream;Movies;https://images.indihometv.com/assets/OTT-88-MAXSTREAM-HD.png
-curiosity;Curiosity;Knowledge;https://images.indihometv.com/assets/CURIOSITY-OTT-135-HD-BW.png
-studiouniversal;Studio Universal;Movies;https://images.indihometv.com/assets/1725346944_STUDIOUNIVERSAL-OTT-88-BW.png
-useeprime;AllPlay Ent;Local;https://images.indihometv.com/assets/ALLPLAY-HD-OTT-88.png
-indikids;FunPlanet;Kids;https://images.indihometv.com/assets/FUNPLANET-OTT-88.png
-seatoday;SEA Today;News;https://images.indihometv.com/logo_seatoday_ver1.png
-transtv;TransTV;Local;https://images.indihometv.com/logo_transtv_ver2.png
-trans7;Trans7;Local;https://images.indihometv.com/logo_trans7_ver1.png
-tvone;TV One;News;https://images.indihometv.com/logo_tvonenew_big.png
-antv;ANTV;Local;https://images.indihometv.com/logo_antvnew_big.png
-metrotv;Metro TV;News;https://images.indihometv.com/logo_metrotv_ver1.png
-kompastv;Kompas TV;Local;https://images.indihometv.com/logo_kompastv_big.png
-net;Net.;Local;https://images.indihometv.com/logo_net_ver1.png
-inews;iNews;Local;https://images.indihometv.com/logo_inews_big.png
-tvri;TVRI;Local;https://images.indihometv.com/logo_tvri_big1.png
-rtv;Rajawali TV;Local;https://images.indihometv.com/logo_rtv_ver1.png
-rodjatv;Rodja TV;Religion;https://images.indihometv.com/logo_rodjatv_big1.png
-jtv;JTV;Local;https://images.indihometv.com/logo_jtv_ver1.png
-mncnews;SINDO News TV;Local;https://images.indihometv.com/assets/THUMBNAIL-88-SINDONEWSTV.png
-idtv;IDTV;News;https://images.indihometv.com/assets/1705631719_IDTV-88-WARNA-HD.png
-beritasatu;BTV;Local;https://images.indihometv.com/logo_beritasatu_ver4.png
-rrinet;RRI NET;Local;https://images.indihometv.com/logo_rri_big1.png
-balitv;Bali TV;Local;https://images.indihometv.com/logo_balitv_big1.png
-mqtv;MQTV;Religion;https://images.indihometv.com/logo_mqtv_big1.png
-mtatv;MTATV;Religion;https://images.indihometv.com/logo_mtatv_big1.png
-daaitv;Daai TV;Local;https://images.indihometv.com/logo_daaitv_big1.png
-alquran;AlQuran Kareem;Religion;https://images.indihometv.com/logo_alquran_big1.png
-jaktv;JakTV;Local;https://images.indihometv.com/logo_jaktv_big1.png
-nusantaratv;Nusantara TV;Local;https://images.indihometv.com/logo_nusantaratv_big.png
-antara;Antara;Local;https://images.indihometv.com/logo_antara_big1.png
-muhammadiyahtv;Muhammadiyah TV;Religion;https://images.indihometv.com/logo_muhammadiyahtv_big1.png
-pramborstv;Prambors;Music;https://images.indihometv.com/logo_pramborstv_big1.png
-idx;IDX;News;https://images.indihometv.com/logo_idx_big.png
-arirang;Arirang;Entertainment;https://images.indihometv.com/logo_arirang_big.png
-jawapos;Jawa Pos TV;Local;https://images.indihometv.com/assets/1706756492_JAWAPOSTV-88-HD.png
-muitv;MUI TV;Religion;https://images.indihometv.com/logo_tvmui_big.png
-tawaftv;Tawaf TV;Religion;https://images.indihometv.com/logo_tawaftvbaru_big.png
-tv9;TV9 NU;Religion;https://images.indihometv.com/logo_tv9_big.png
-musikindo;Musik Indonesia;Music;https://images.indihometv.com/logo_musikindo_big.png
-indonesiana;Indonesiana TV;Local;https://images.indihometv.com/logo_indonesiana_ver1.png
-seru;Seru!;Entertainment;https://images.indihometv.com/logo_seru_big.png
-uchannel;UChannel;Religion;https://images.indihometv.com/logo_uchannel_big1.png
-cctv4;CCTV4;Entertainment;https://images.indihometv.com/logo_cctv4_big1.png
-dwtv;DW (English);News;https://images.indihometv.com/logo_dwtv_ver1.png
-nhkworld;nhk world Japan;Entertainment;https://images.indihometv.com/logo_nhkworld_big.png
 abcaustralia;ABC Australia;Entertainment;https://images.indihometv.com/logo_abcaustralia_big.png
-chinesedrama;Chinese Drama;Entertainment;https://images.indihometv.com/logo_chinesedrama_big.png
-euronews;Euronews;News;https://images.indihometv.com/logo_euronews_ver1.png
+afc;Asian Food Network;Lifestyle;https://images.indihometv.com/logo_afc_ver1.png
+aljazeera;Aljazeera;News;https://images.indihometv.com/logo_aljazeera_big1.png
+alquran;AlQuran Kareem;Religion;https://images.indihometv.com/logo_alquran_big1.png
+animalplanet;Animal Planet;Knowledge;https://images.indihometv.com/assets/ANIMALPLANET-OTT-88-HD.png
+animax;Animax;Entertainment;https://images.indihometv.com/logo_animax_big.png
+aniplus;Aniplus;Entertainment;https://images.indihometv.com/logo_aniplus_big1.png
+antara;Antara;Local;https://images.indihometv.com/logo_antara_big1.png
+antv;ANTV;Local;https://images.indihometv.com/logo_antvnew_big.png
+arirang;Arirang;Entertainment;https://images.indihometv.com/logo_arirang_big.png
 atv;ATV;Lifestyle;https://images.indihometv.com/logo_atv_big.png
-france24;France 24;News;https://images.indihometv.com/logo_france24_big.png
-cgtndocumentary;CGTN Documentary;Knowledge;https://images.indihometv.com/logo_cgtndocumentary_big1.png
-sctv;SCTV;Local;https://images.indihometv.com/logo_sctv_ver3.png
-indosiar;Indosiar;Local;https://images.indihometv.com/logo_indosiar_ver3.png
-phoenixchinese;Phoenix Chinese;Knowledge;https://images.indihometv.com/assets/1717557969_88-PHOENIXCHINESE-BW.png
+axn;AXN;Entertainment;https://images.indihometv.com/logo_axn_ver2.png
+balitv;Bali TV;Local;https://images.indihometv.com/logo_balitv_big1.png
 bein1;SPOTV;Sport;https://images.indihometv.com/assets/1719765710_SPOTV-OTT-88-BW.png
 bein2;SPOTV 2;Sport;https://images.indihometv.com/assets/1719765786_SPOTV2-OTT-88-BW.png
-nba;NBA;Sport;https://images.indihometv.com/logo_nba_ver1.png
-horizonsport;Horizon Sports;Sport;https://images.indihometv.com/logo_horizonsport_ver2.png
-fightsport;Fight Sport;Sport;https://images.indihometv.com/logo_fightsport_ver1.png
-tvnmovies;TVN Movies;Movies;https://images.indihometv.com/logo_tvnmovies_ver1.png
-imc;IMC;Movies;https://images.indihometv.com/logo_imc_big.png
-galaxypremium;Galaxy Premium;Movies;https://images.indihometv.com/logo_galaxypremium_big.png
-galaxy;Galaxy;Movies;https://images.indihometv.com/logo_galaxy_big1.png
-hits;Hits;Entertainment;https://images.indihometv.com/logo_hits_ver1.png
-hitsmovie;HIts Movie;Movies;https://images.indihometv.com/logo_hitsmovie_ver1.png
-flik;Flik;Movies;https://images.indihometv.com/logo_flik_ver2.png
+beritasatu;BTV;Local;https://images.indihometv.com/logo_beritasatu_ver4.png
 bioskopindonesia;Bioskop Indonesia;Movies;https://images.indihometv.com/logo_bioskopindonesia_big1.png
-celestialmovie;Celestial Movie;Movies;https://images.indihometv.com/logo_celestialmovie_big.png
-zbioskop;ZBioskop;Movies;https://images.indihometv.com/logo_zbioskop_ver1.png
-thrill;Thrill;Movies;https://images.indihometv.com/logo_thrill_ver1.png
-mycinemaasia;My Cinema Asia;Movies;https://images.indihometv.com/logo_new-mycinemaasia_big.png
-myfamily;My Family;Movies;https://images.indihometv.com/logo_myfamily_ver2.png
-mycinema;My Cinema;Movies;https://images.indihometv.com/logo_mycinema_ver1.png
-cinemaworld;Cinema World;Movies;https://images.indihometv.com/logo_cinemaworldnew_big.png
-cnnindonesia;CNN Indonesia;News;https://images.indihometv.com/logo_cnnindonesia_ver1.png
-cnbcindonesia;CNBC Indonesia;News;https://images.indihometv.com/logo_cnbcindonesia_ver1.png
 bloomberg;Bloomberg;News;https://images.indihometv.com/logo_bloomberg_big1.png
-newsasia;News Asia;News;https://images.indihometv.com/logo_newsasia_big.png
-cnninternational;CNN International;News;https://images.indihometv.com/logo_cnninternational_ver1.png
-aljazeera;Aljazeera;News;https://images.indihometv.com/logo_aljazeera_big1.png
-cnbcasia;CNBC Asia;News;https://images.indihometv.com/logo_cnbcasias_big.png
-tvbs;TVBS News;News;https://images.indihometv.com/logo_tvbsnews_big.png
-tvn;TVN;Entertainment;https://images.indihometv.com/logo_tvn_ver1.png
-axn;AXN;Entertainment;https://images.indihometv.com/logo_axn_ver2.png
-kplus;Kplus;Entertainment;https://images.indihometv.com/logo_kplus_ver2.png
-kbsworld;KBS World;Entertainment;https://images.indihometv.com/logo_kbsworld_ver2.png
-cdrama;Citra Drama;Entertainment;https://images.indihometv.com/logo_cdrama_ver1.png
-warner;Warner;Entertainment;https://images.indihometv.com/logo_warner_ver1.png
-blueantextreme;Rock Action;Entertainment;https://images.indihometv.com/logo_blueantextreme_ver1.png
-tlc;TLC;Entertainment;https://images.indihometv.com/logo_tlc_ver1.png
-history;History;Knowledge;https://images.indihometv.com/logo_history_ver3.png
-dunialain;Dunia Lain;Entertainment;https://images.indihometv.com/logo_dunialain_big.png
 blueant;Rock Entertainment;Entertainment;https://images.indihometv.com/logo_blueant_big.png
-aniplus;Aniplus;Entertainment;https://images.indihometv.com/logo_aniplus_big1.png
-animax;Animax;Entertainment;https://images.indihometv.com/logo_animax_big.png
-sone;SONE;Entertainment;https://images.indihometv.com/logo_sone_big.png
-kix;Kix;Entertainment;https://images.indihometv.com/logo_kix_ver1.png
-lifetime;Lifetime;Entertainment;https://images.indihometv.com/logo_lifetime_big.png
-tv5monde;TV5Monde;Entertainment;https://images.indihometv.com/logo_tv5monde_big1.png
-zhejiang;Zhejiang;Entertainment;https://images.indihometv.com/logo_zhejiang_big.png
-shenzen;Shenzen;Entertainment;https://images.indihometv.com/logo_shenzen_big.png
-cartoonnetwork;Cartoon Network;Kids;https://images.indihometv.com/logo_cartoonnetwork_big.png
-horee;Horee;Kids;https://images.indihometv.com/logo_horee_ver1.png
-nickjr;Nick Junior;Kids;https://images.indihometv.com/logo_nickjr_ver1.png
-dreamworks;Dreamworks;Kids;https://images.indihometv.com/logo_dreamworks_ver1.png
-nickelodeon;Nickelodeon;Kids;https://images.indihometv.com/logo_nickelodeon_ver1.png
-duniaanak;Dunia anak;Kids;https://images.indihometv.com/logo_duniaanak_big1.png
+blueantextreme;Rock Action;Entertainment;https://images.indihometv.com/logo_blueantextreme_ver1.png
 boomerang;Cartoonito;Kids;https://images.indihometv.com/assets/1705331415_CARTOONITO-88-HD-BW.png
-mykids;MyKidz;Kids;https://images.indihometv.com/logo_mykids_ver1.png
-mentaritv;Mentari TV;Kids;https://images.indihometv.com/logo_mentaritv_big.png
+cartoonnetwork;Cartoon Network;Kids;https://images.indihometv.com/logo_cartoonnetwork_big.png
+cctv4;CCTV4;Entertainment;https://images.indihometv.com/logo_cctv4_big1.png
+cdrama;Citra Drama;Entertainment;https://images.indihometv.com/logo_cdrama_ver1.png
+celestialmovie;Celestial Movie;Movies;https://images.indihometv.com/logo_celestialmovie_big.png
+cgtndocumentary;CGTN Documentary;Knowledge;https://images.indihometv.com/logo_cgtndocumentary_big1.png
+chinesedrama;Chinese Drama;Entertainment;https://images.indihometv.com/logo_chinesedrama_big.png
+cinemaworld;Cinema World;Movies;https://images.indihometv.com/logo_cinemaworldnew_big.png
+citradangdut;Citra Dangdut;Music;https://images.indihometv.com/logo_citradangdut_ver1.png
+cnbcasia;CNBC Asia;News;https://images.indihometv.com/logo_cnbcasias_big.png
+cnbcindonesia;CNBC Indonesia;News;https://images.indihometv.com/logo_cnbcindonesia_ver1.png
+cnnindonesia;CNN Indonesia;News;https://images.indihometv.com/logo_cnnindonesia_ver1.png
+cnninternational;CNN International;News;https://images.indihometv.com/logo_cnninternational_ver1.png
+crimeinvestigation;Crime Investigation;Knowledge;https://images.indihometv.com/logo_crimeinvest_big.png
+curiosity;Curiosity;Knowledge;https://images.indihometv.com/assets/CURIOSITY-OTT-135-HD.png
+daaitv;Daai TV;Local;https://images.indihometv.com/logo_daaitv_big1.png
 davinci;Da Vinci Learning;Kids;https://images.indihometv.com/logo_davinci_big1.png
 disco;Discovery Channel;Knowledge;https://images.indihometv.com/logo_disco_ver1.png
-techstorm;Tech Storm;Knowledge;https://images.indihometv.com/logo_techstorm_ver1.png
-crimeinvestigation;Crime Investigation;Knowledge;https://images.indihometv.com/logo_crimeinvest_big.png
-lingua;Lingua;Knowledge;https://images.indihometv.com/logo_lingua_big.png
-afc;Asian Food Network;Lifestyle;https://images.indihometv.com/logo_afc_ver1.png
-hgtv;HGTV;Lifestyle;https://images.indihometv.com/logo_hgtv_ver1.png
+discoveryasia;Discovery Asia;Knowledge;https://images.indihometv.com/assets/DISCOVERYASIA-OTT-135-BW.png
+dreamworks;Dreamworks;Kids;https://images.indihometv.com/logo_dreamworks_ver1.png
+duniaanak;Dunia anak;Kids;https://images.indihometv.com/logo_duniaanak_big1.png
+dunialain;Dunia Lain;Entertainment;https://images.indihometv.com/logo_dunialain_big.png
+dwtv;DW (English);News;https://images.indihometv.com/logo_dwtv_ver1.png
 eatgo;Eat & Go;Lifestyle;https://images.indihometv.com/logo_eatgo_big1.png
+euronews;Euronews;News;https://images.indihometv.com/logo_euronews_ver1.png
 fashiontv;FashionTV;Lifestyle;https://images.indihometv.com/logo_fashiontv_ver2.png
-mtvlive;MTV Live;Music;https://images.indihometv.com/logo_mtvlive_ver1.png
-citradangdut;Citra Dangdut;Music;https://images.indihometv.com/logo_citradangdut_ver1.png
+fightsport;Fight Sport;Sport;https://images.indihometv.com/logo_fightsport_ver1.png
+flik;Flik;Movies;https://images.indihometv.com/logo_flik_ver2.png
+france24;France 24;News;https://images.indihometv.com/logo_france24_big.png
+galaxy;Galaxy;Movies;https://images.indihometv.com/logo_galaxy_big1.png
+galaxypremium;Galaxy Premium;Movies;https://images.indihometv.com/logo_galaxypremium_big.png
+hgtv;HGTV;Lifestyle;https://images.indihometv.com/logo_hgtv_ver1.png
+history;History;Knowledge;https://images.indihometv.com/logo_history_ver3.png
+hits;Hits;Entertainment;https://images.indihometv.com/logo_hits_ver1.png
+hitsmovie;HIts Movie;Movies;https://images.indihometv.com/logo_hitsmovie_ver1.png
+hitsnow;HITS Now;Entertainment;https://images.indihometv.com/logo_hitsnow_ver1.png
+horee;Horee;Kids;https://images.indihometv.com/logo_horee_ver1.png
+horizonsport;Horizon Sports;Sport;https://images.indihometv.com/logo_horizonsport_ver2.png
+idtv;IDTV;News;https://images.indihometv.com/assets/1705631719_IDTV-88-WARNA-HD.png
+idx;IDX;News;https://images.indihometv.com/logo_idx_big.png
 ikonser;I-Konser;Music;https://images.indihometv.com/logo_ikonser_big.png
-ochannel;MOJI;Local;https://images.indihometv.com/logo_ochannel_ver1.png
+imc;IMC;Movies;https://images.indihometv.com/logo_imc_big.png
+indikids;FunPlanet;Kids;https://images.indihometv.com/assets/FUNPLANET-OTT-88.png
+indonesiana;Indonesiana TV;Local;https://images.indihometv.com/logo_indonesiana_ver1.png
+indosiar;Indosiar;Local;https://images.indihometv.com/logo_indosiar_ver3.png
+inews;iNews;Local;https://images.indihometv.com/logo_inews_big.png
 insert;Insert;Local;https://images.indihometv.com/logo_insert_big1.png
+jaktv;JakTV;Local;https://images.indihometv.com/logo_jaktv_big1.png
+jawapos;Jawa Pos TV;Local;https://images.indihometv.com/assets/1706756492_JAWAPOSTV-88-HD.png
+jtv;JTV;Local;https://images.indihometv.com/logo_jtv_ver1.png
+kbsworld;KBS World;Entertainment;https://images.indihometv.com/logo_kbsworld_ver2.png
+kix;Kix;Entertainment;https://images.indihometv.com/logo_kix_ver1.png
+kompastv;Kompas TV;Local;https://images.indihometv.com/logo_kompastv_big.png
+kplus;Kplus;Entertainment;https://images.indihometv.com/logo_kplus_ver2.png
+lifetime;Lifetime;Entertainment;https://images.indihometv.com/logo_lifetime_big.png
+lingua;Lingua;Knowledge;https://images.indihometv.com/logo_lingua_big.png
+lovenature;Love Nature;Knowledge;https://images.indihometv.com/assets/THUMBNAIL-135-LOVENATUREHD.png
+maxstream;Maxstream;Movies;https://images.indihometv.com/assets/OTT-88-MAXSTREAM-HD.png
+mentaritv;Mentari TV;Kids;https://images.indihometv.com/logo_mentaritv_big.png
+metrotv;Metro TV;News;https://images.indihometv.com/logo_metrotv_ver1.png
+mncnews;SINDO News TV;Local;https://images.indihometv.com/assets/THUMBNAIL-88-SINDONEWSTV.png
 moonbug;Moonbug;Kids;https://images.indihometv.com/logo_moonbug_ver1.png
+mqtv;MQTV;Religion;https://images.indihometv.com/logo_mqtv_big1.png
+mtatv;MTATV;Religion;https://images.indihometv.com/logo_mtatv_big1.png
+mtvlive;MTV Live;Music;https://images.indihometv.com/logo_mtvlive_ver1.png
+muhammadiyahtv;Muhammadiyah TV;Religion;https://images.indihometv.com/logo_muhammadiyahtv_big1.png
+muitv;MUI TV;Religion;https://images.indihometv.com/logo_tvmui_big.png
+musikindo;Musik Indonesia;Music;https://images.indihometv.com/logo_musikindo_big.png
+mykids;MyKidz;Kids;https://images.indihometv.com/logo_mykids_ver1.png
+nba;NBA;Sport;https://images.indihometv.com/logo_nba_ver1.png
+net;Net.;Local;https://images.indihometv.com/logo_net_ver1.png
+newsasia;News Asia;News;https://images.indihometv.com/logo_newsasia_big.png
 newtvcomprehensive;New Tv Comprehensive;Entertainment;https://images.indihometv.com/assets/1705919539_NEWTVCOMPREHENSIVE-88-HD-BW.png
 newtvfinance;New Tv Finance;Entertainment;https://images.indihometv.com/assets/1705920072_NEWTVFINANCE-88-HD-BW.png
 newtvvariety;New Tv Variety;Entertainment;https://images.indihometv.com/assets/1705925830_NEWTVVARIETY-88-HD-BW.png
+nhkworld;nhk world Japan;Entertainment;https://images.indihometv.com/logo_nhkworld_big.png
+nickelodeon;Nickelodeon;Kids;https://images.indihometv.com/logo_nickelodeon_ver1.png
+nickjr;Nick Junior;Kids;https://images.indihometv.com/logo_nickjr_ver1.png
+nusantaratv;Nusantara TV;Local;https://images.indihometv.com/logo_nusantaratv_big.png
+ochannel;MOJI;Local;https://images.indihometv.com/logo_ochannel_ver1.png
+phoenixchinese;Phoenix Chinese;Knowledge;https://images.indihometv.com/assets/1717557969_88-PHOENIXCHINESE-BW.png
 phoenixinfonews;Phoenix InfoNews;Entertainment;https://images.indihometv.com/assets/1717557665_88-PHOENIXINFONEWS-BW.png
+pramborstv;Prambors;Music;https://images.indihometv.com/logo_pramborstv_big1.png
+rodjatv;Rodja TV;Religion;https://images.indihometv.com/logo_rodjatv_big1.png
+rrinet;RRI NET;Local;https://images.indihometv.com/logo_rri_big1.png
+rtv;Rajawali TV;Local;https://images.indihometv.com/logo_rtv_ver1.png
+sctv;SCTV;Local;https://images.indihometv.com/logo_sctv_ver3.png
+seatoday;SEA Today;News;https://images.indihometv.com/logo_seatoday_ver1.png
+seru;Seru!;Entertainment;https://images.indihometv.com/logo_seru_big.png
+shenzen;Shenzen;Entertainment;https://images.indihometv.com/logo_shenzen_big.png
+sone;SONE;Entertainment;https://images.indihometv.com/logo_sone_big.png
+studiouniversal;Studio Universal;Movies;https://images.indihometv.com/assets/1725346944_STUDIOUNIVERSAL-OTT-88-BW.png
+tawaftv;Tawaf TV;Religion;https://images.indihometv.com/logo_tawaftvbaru_big.png
+techstorm;Tech Storm;Knowledge;https://images.indihometv.com/logo_techstorm_ver1.png
+thrill;Thrill;Movies;https://images.indihometv.com/logo_thrill_ver1.png
+tlc;TLC;Entertainment;https://images.indihometv.com/logo_tlc_ver1.png
+trans7;Trans7;Local;https://images.indihometv.com/logo_trans7_ver1.png
+transtv;TransTV;Local;https://images.indihometv.com/logo_transtv_ver2.png
+tv5monde;TV5Monde;Entertainment;https://images.indihometv.com/logo_tv5monde_big1.png
+tv9;TV9 NU;Religion;https://images.indihometv.com/logo_tv9_big.png
+tvbs;TVBS News;News;https://images.indihometv.com/logo_tvbsnews_big.png
+tvn;TVN;Entertainment;https://images.indihometv.com/logo_tvn_ver1.png
+tvnmovies;TVN Movies;Movies;https://images.indihometv.com/logo_tvnmovies_ver1.png
+tvone;TV One;News;https://images.indihometv.com/logo_tvonenew_big.png
+tvri;TVRI;Local;https://images.indihometv.com/logo_tvri_big1.png
+uchannel;UChannel;Religion;https://images.indihometv.com/logo_uchannel_big1.png
+useeprime;AllPlay Ent;Local;https://images.indihometv.com/assets/ALLPLAY-HD-OTT-88.png
+warner;Warner;Entertainment;https://images.indihometv.com/logo_warner_ver1.png
+zbioskop;ZBioskop;Movies;https://images.indihometv.com/logo_zbioskop_ver1.png
+zhejiang;Zhejiang;Entertainment;https://images.indihometv.com/logo_zhejiang_big.png

@@ -10,7 +10,7 @@
   "author": "Toha <tohenk@yahoo.com>",
   "license": "MIT",
   "dependencies": {
-    "@fast-csv/format": "^5.0.0",
+    "@fast-csv/format": "^5.0.2",
     "cheerio": "^1.0.0"
   }
 }
