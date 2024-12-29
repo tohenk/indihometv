@@ -29,6 +29,12 @@ class App {
 
     tvLiveUrl = 'https://www.indihometv.com/tv/live'
     tvOndemandUrl = 'https://www.indihometv.com/tvod'
+    tvLogoMaps = {'logogrey/grey_': '', 'small': 'big'}
+    tvLogoVariants = [
+        {'HD-BW': 'HD'},
+        {'-BW': '-HD'},
+        {'-BW': '-WARNA'},
+    ]
 
     fetch(url) {
         return new Promise((resolve, reject) => {
@@ -82,6 +88,54 @@ class App {
         });
     }
 
+    fetchLogo(logo) {
+        return new Promise((resolve, reject) => {
+            const r = url => {
+                this.logos[logo] = url;
+                resolve(url);
+            }
+            if (!this.logos) {
+                this.logos = {};
+            }
+            if (this.logos[logo]) {
+                return r(this.logos[logo]);
+            }
+            const variants = this.getVariants(logo);
+            Promise.allSettled(
+                variants.map(v => new Promise((resolve, reject) => {
+                    this.fetch(v)
+                        .then(res => resolve(res ? v : null))
+                        .catch(err => reject(err));
+                }))
+            ).then(res => {
+                const urls = res.filter(i => i.value !== null);
+                if (urls.length) {
+                    r(urls[0].value);
+                } else {
+                    r(logo);
+                }
+            });
+        });
+    }
+
+    getVariants(logo) {
+        const result = [];
+        const r = (s, m) => {
+            for (const k of Object.keys(m)) {
+                s = s.replace(k, m[k]);
+            }
+            return s;
+        }
+        const baselogo = r(logo, this.tvLogoMaps);
+        for (let variant of this.tvLogoVariants) {
+            const newlogo = r(baselogo, variant);
+            if (newlogo !== logo && result.indexOf(newlogo) < 0) {
+                result.push(newlogo);
+            }
+        }
+        return result;
+    }
+
     async parse(content) {
         const res = [];
         const cheerio = require('cheerio');
@@ -123,31 +177,6 @@ class App {
             }
         }
         return res;
-    }
-
-    fetchLogo(logo) {
-        return new Promise((resolve, reject) => {
-            const r = url => {
-                this.logos[logo] = url;
-                resolve(url);
-            }
-            if (!this.logos) {
-                this.logos = {};
-            }
-            if (this.logos[logo]) {
-                return r(this.logos[logo]);
-            }
-            const nlogo = logo
-                .replace('logogrey/grey_', '')
-                .replace('-BW', '')
-                .replace('small', 'big');
-            if (nlogo === logo) {
-                return r(logo);
-            }
-            this.fetch(nlogo)
-                .then(res => r(res ? nlogo : logo))
-                .catch(err => r(logo));
-        });
     }
 
     async save(data) {
