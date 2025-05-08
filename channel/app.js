@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  *
- * Copyright (c) 2023-2024 Toha <tohenk@yahoo.com>
+ * Copyright (c) 2023-2025 Toha <tohenk@yahoo.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -29,7 +29,7 @@ class App {
 
     tvLiveUrl = 'https://www.indihometv.com/tv/live'
     tvOndemandUrl = 'https://www.indihometv.com/tvod'
-    tvLogoMaps = {'logogrey/grey_': '', 'small': 'big'}
+    tvLogoMaps = {'logogrey/grey_': '', 'grey': '', 'small': 'big'}
     tvLogoVariants = [
         {'HD-BW': 'HD'},
         {'-BW': '-HD'},
