@@ -31,16 +31,22 @@ Hal-hal yang harus disiapkan:
     sebagai wan, `ether2`-`ether3` sebagai port bridge tv, dan `ether4`-`ether5` sebagai port bridge
     lan.
 
+    *Update: 23 Mei 2025*
+
+    Port TV IndiHome saat ini tidak otomatis terdeteksi sebagai edge port STP, sehingga menyebabkan
+    port menjadi `non-forwarding`. Bila diasumsikan port yang terhubung dengan port TV IndiHome adalah
+    port `ether2` maka port tersebut dapat difungsikan sebagai edge port dengan `edge=yes`.
+
     ```
     # setup bridge
     /interface bridge
     add igmp-snooping=yes name=br-lan port-cost-mode=short priority=0x4000
     add name=br-tv port-cost-mode=short priority=0x5000
     /interface bridge port
-    add bridge=br-tv ingress-filtering=no interface=ether2 internal-path-cost=10 path-cost=10
-    add bridge=br-tv ingress-filtering=no interface=ether3 internal-path-cost=10 path-cost=10
-    add bridge=br-lan ingress-filtering=no interface=ether4 internal-path-cost=10 path-cost=10
-    add bridge=br-lan ingress-filtering=no interface=ether5 internal-path-cost=10 path-cost=10
+    add bridge=br-tv edge=yes interface=ether2 internal-path-cost=10 path-cost=10
+    add bridge=br-tv interface=ether3 internal-path-cost=10 path-cost=10
+    add bridge=br-lan interface=ether4 internal-path-cost=10 path-cost=10
+    add bridge=br-lan interface=ether5 internal-path-cost=10 path-cost=10
     # setup ip address
     /ip address
     add address=10.0.0.1/24 interface=br-lan network=10.0.0.0
