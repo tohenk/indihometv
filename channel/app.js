@@ -182,7 +182,7 @@ class App {
     async save(data) {
         if (Object.keys(data).length) {
             const csv = require('@fast-csv/format');
-            const stream = csv.format({delimiter: ';'});
+            const stream = csv.format();
             const filename = path.join(__dirname, 'channel.csv');
             stream.pipe(fs.createWriteStream(filename));
             let header = true;
