@@ -156,7 +156,7 @@ class App {
             info.name = ch.data('name');
             if (info.name) {
                 // channel category
-                const classes = ch.parent().attr('class').split(' ');
+                const classes = ch.parents('.col-channel').attr('class').split(' ');
                 const category = classes[classes.length - 1];
                 if (!categories[category]) {
                     const cat = $(`#category a[data-filter=".${category}"]`);
