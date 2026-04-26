@@ -27,14 +27,9 @@ const path = require('path');
 
 class App {
 
-    tvLiveUrl = 'https://www.indihometv.com/tv/live'
-    tvOndemandUrl = 'https://www.indihometv.com/tvod'
-    tvLogoMaps = {'logogrey/grey_': '', 'grey': '', 'small': 'big'}
-    tvLogoVariants = [
-        {'HD-BW': 'HD'},
-        {'-BW': '-HD'},
-        {'-BW': '-WARNA'},
-    ]
+    tvChannelsUrl = 'https://vmp.maxstream.tv/api/v3/videos/list?contentType=channel'
+    imagesBaseUrl = 'https://images.maxstream.tv'
+    imagesPath = 'images.landscapecarousel.hdpi'
 
     fetch(url) {
         return new Promise((resolve, reject) => {
@@ -43,7 +38,7 @@ class App {
                 /** @type {Buffer} buff */
                 let buff, err, code;
                 const parsedUrl = new URL(url);
-                const http = require('https:' == parsedUrl.protocol ? 'https' : 'http');
+                const http = require('https:' === parsedUrl.protocol ? 'https' : 'http');
                 const req = http.request(url, {method: 'GET'}, res => {
                     code = res.statusCode;
                     res.setEncoding('utf8');
@@ -65,6 +60,13 @@ class App {
                                 reject('No redirection to follow!');
                             }
                         } else {
+                            if (
+                                res.headers &&
+                                typeof res.headers['content-type'] === 'string' &&
+                                res.headers['content-type'].toLowerCase().includes('application/json')
+                            ) {
+                                buff = JSON.parse(buff);
+                            }
                             done = true;
                         }
                     });
@@ -88,93 +90,34 @@ class App {
         });
     }
 
-    fetchLogo(logo) {
-        return new Promise((resolve, reject) => {
-            const r = url => {
-                this.logos[logo] = url;
-                resolve(url);
-            }
-            if (!this.logos) {
-                this.logos = {};
-            }
-            if (this.logos[logo]) {
-                return r(this.logos[logo]);
-            }
-            const variants = this.getVariants(logo);
-            Promise.allSettled(
-                variants.map(v => new Promise((resolve, reject) => {
-                    this.fetch(v)
-                        .then(res => resolve(res ? v : null))
-                        .catch(err => reject(err));
-                }))
-            ).then(res => {
-                const urls = res.filter(i => i.value !== null);
-                if (urls.length) {
-                    r(urls[0].value);
-                } else {
-                    r(logo);
-                }
-            });
-        });
-    }
-
-    getVariants(logo) {
-        const result = [];
-        const r = (s, m) => {
-            for (const k of Object.keys(m)) {
-                s = s.replace(k, m[k]);
-            }
-            return s;
-        }
-        const baselogo = r(logo, this.tvLogoMaps);
-        for (let variant of this.tvLogoVariants) {
-            const newlogo = r(baselogo, variant);
-            if (newlogo !== logo && result.indexOf(newlogo) < 0) {
-                result.push(newlogo);
-            }
-        }
-        return result;
-    }
-
     async parse(content) {
         const res = [];
-        const cheerio = require('cheerio');
-        const $ = cheerio.load(content);
-        const channels = $('#channelContainer a.channel-item');
-        const categories = {};
-        for (const channel of channels) {
-            const ch = $(channel);
-            const info = {};
-            // channel code
-            if (ch.data('code')) {
-                info.id = ch.data('code');
-            } else if (ch.data('url')) {
-                const path = ch.data('url').split('/');
-                info.id = path[path.length - 1];
-            }
-            // channel name
-            info.name = ch.data('name');
-            if (info.name) {
-                // channel category
-                const classes = ch.parents('.col-channel').attr('class').split(' ');
-                const category = classes[classes.length - 1];
-                if (!categories[category]) {
-                    const cat = $(`#category a[data-filter=".${category}"]`);
-                    if (cat.length > 0) {
-                        categories[category] = cat.text().trim();
+        if (Array.isArray(content?.videos)) {
+            const f = (o, p) => {
+                let res;
+                if (p) {
+                    let c = o;
+                    for (const a of p.split('.')) {
+                        if (c && c[a] !== undefined) {
+                            c = c[a];
+                        } else {
+                            c = undefined;
+                        }
+                    }
+                    if (c !== undefined) {
+                        res = c;
                     }
                 }
-                if (categories[category]) {
-                    info.category = categories[category];
-                }
-                // channel logo
-                let logo = ch.find('img').data('src');
-                if (logo.indexOf('?') > 0) {
-                    logo = logo.substr(0, logo.indexOf('?'));
-                }
-                info.logo = await this.fetchLogo(logo);
-                res.push(info);
+                return res;
             }
+            res.push(...content.videos
+                .filter(a => a?.contentType === 'Channel')
+                .map(a => ({
+                    id: a.translations.id.title.toLowerCase().replace(/\s+/g, ''),
+                    name: a.translations.id.title,
+                    category: a.genreNames[0],
+                    logo: `${this.imagesBaseUrl}${f(a, this.imagesPath)}`,
+                })));
         }
         return res;
     }
@@ -202,8 +145,7 @@ class App {
 
     async run() {
         const infos = {};
-        const urls = [this.tvLiveUrl, this.tvOndemandUrl];
-        for (const url of urls) {
+        for (const url of [this.tvChannelsUrl]) {
             const body = await this.fetch(url);
             if (!(body instanceof Error)) {
                 const res = await this.parse(body);
