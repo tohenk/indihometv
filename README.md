@@ -83,57 +83,66 @@ Hal-hal yang harus disiapkan:
 
     Untuk mengetahui ip address dan port yang digunakan oleh kanal TV IndiHome, terlebih dahulu
     putar kanal tv tersebut di STB IndiHome, kemudian lakukan _torch_ pada bridge tv dan catat nama
-    kanal, nomor kanal, ip address dan port yang digunakan. Untuk mengetahui ip address dan port
-    yang digunakan, amati pada jendela _torch_ untuk lalu lintas dengan `Rx Rate` ±2.0Mbps (kanal SD)
-    atau `Rx Rate` ±5.7Mbps (kanal HD) seperti ditunjukkan pada gambar berikut.
+    kanal, ip address dan port yang digunakan. Untuk mengetahui ip address dan port yang digunakan,
+    amati pada jendela _torch_ untuk lalu lintas dengan `Rx Rate` ±2.0Mbps (kanal SD) atau `Rx Rate`
+    ±5.7Mbps (kanal HD) seperti ditunjukkan pada gambar berikut.
 
     ![Torch](/assets/mikrotik-torch.png)
 
     Dari contoh _torch_ di atas – ip address dan port dapat diambil dari kolom `Dst.` – sehingga dapat
     dituliskan data kanal sebagai berikut.
 
-    | Nama kanal  | Nomor kanal | Ip address  | Port |
-    |-------------|-------------|-------------|------|
-    | AllPlay Ent | 88          | 239.1.1.252 | 9486 |
+    | Nama kanal  | Ip address  | Port |
+    |-------------|-------------|------|
+    | MAXReels    | 239.1.1.252 | 9486 |
 
     Ulangi langkah-langkah di atas untuk semua kanal yang tersedia pada langganan TV IndiHome anda.
 
     Setelah semua kanal terdata, selanjutnya gunakan tool [IndiHomeTV](/IndiHomeTV.xlsm) dan masukkan
-    semua data tersebut pada lembar `M3U`. Ketika membuka tool tersebut pertama kali, pastikan macro
-    diaktifkan seperti terlihat pada gambar berikut.
+    semua data tersebut pada lembar `STREAM`. Ketika membuka tool tersebut pertama kali, pastikan
+    _macro_ diaktifkan seperti terlihat pada gambar berikut.
 
     ![Enable macro](/assets/enable-macro.png)
 
-    Pengisian data kanal pada lembar `M3U` dijabarkan sebagai berikut:
+    Pengisian data kanal pada lembar `STREAM` dijabarkan sebagai berikut:
 
     | Kolom   | Deskripsi                                                                     |
     |---------|-------------------------------------------------------------------------------|
     | ID      | Identitas kanal yang dapat dilihat pada lembar `CHANNEL` maupun `CHANNEL EXT` |
-    | TVGID   | Identitas kanal EPG yang dapat dilihat di https://iptv-org.github.io          |
-    | CH      | Nomor kanal                                                                   |
     | Q       | Isi dengan kualitas kanal `SD`, `HD`, atau `Dolby HD`                         |
     | ADDRESS | Ip address kanal                                                              |
     | PORT    | Port kanal                                                                    |
-    | ENABLED | Isi dengan `TRUE` atau `FALSE`, jika `FALSE` maka kanal diabaikan             |
 
-    Contoh pengisian playlist M3U dari data kanal tv dapat dilihat pada gambar berikut.
+    Contoh pengisian stream playlist M3U dari data kanal tv dapat dilihat pada gambar berikut.
 
     ![Playlist M3U](/assets/playlist-m3u.png)
 
-    Agar playlist yang dibuat nantinya dilengkapi dengan Electronic Program Guide (EPG), perlu disiapkan
-    server EPG dengan mengikuti langkah-langkah [ini](https://github.com/tohenk/docker-epg). Pengisian
-    EPG dapat dilakukan melalui lembar `EPG` seperti ditunjukkan pada contoh berikut ini.
+    Agar playlist yang dibuat nantinya dilengkapi dengan Electronic Program Guide (EPG), aktifkan koleksi
+    EPG yang terdapat pada lembar `EPG` dengan mengubah kolom `ENABLED` menjadi `TRUE` dan untuk menonaktifkan
+    ubah menjadi `FALSE`. Cotoh pengisian seperti ditunjukkan pada gambar berikut ini.
 
     ![Playlist EPG](/assets/playlist-epg.png)
 
-    Langkah terakhir yaitu mengekspor playlist yang telah dibuat agar dapat digunakan di Kodi, jalankan
-    macro `ExportPlaylist` melalui menu `View > Macros > View Macros` dan tekan `Run` untuk mengeksekusinya.
+    Langkah selanjutnya yaitu mengekspor playlist dan EPG yang telah dibuat agar dapat digunakan di Kodi.
+    Untuk menjalankan _macro_, gunakan menu `View > Macros > View Macros`.
 
     ![View macros](/assets/view-macros.png)
 
     ![Run macro](/assets/run-macro.png)
 
+    Untuk mengekspor playlist aktifkan _macro_ `ExportPlaylist` dan klik `Run` untuk mengeksekusinya.
+    Hasil ekspor playlist dapat ditemukan dengan mencari berkas bernama `IndiHomeTV.m3u`.
+
     ![Playlist exported](/assets/playlist-exported.png)
+
+    Untuk mengekspor EPG aktifkan _macro_ `ExportGuide` dan klik `Run` untuk mengeksekusinya.
+    Hasil ekspor EPG dapat ditemukan dengan mencari berkas bernama `indihometv1-channels.xml`
+    dan `indihometv2-channels.xml`.
+
+    ![EPG exported](/assets/epg-exported.png)
+
+    Selanjutnya umpankan kedua data kanal EPG tersebut pada Docker EPG dengan mengikuti langkah-langkah
+    [ini](https://github.com/tohenk/docker-epg).
 
 3. Mengaktifkan mac address STB di router MikroTik
 

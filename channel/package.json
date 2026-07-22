@@ -1,6 +1,6 @@
 {
   "name": "indihometv-channel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "IndihomeTV channel downloader",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "Toha <tohenk@yahoo.com>",
   "license": "MIT",
   "dependencies": {
-    "@fast-csv/format": "^5.0.5"
+    "@fast-csv/format": "^5.0.7",
+    "@fast-csv/parse": "^5.0.7"
   }
 }
